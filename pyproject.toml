@@ -1,7 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "the-file-tool"
 version = "0.1.0"
-description = "Add your description here"
+description = "A pure python library for converting data, documents, and images. Built at Hack@URI 2026"
 readme = "README.md"
-requires-python = ">=3.14"
-dependencies = []
+requires-python = ">=3.10"
+authors = [
+    { name = "Xydra01", email = "theminecraftgurru@gmail.com" }
+]
+dependencies = [
+    "pandas",
+    "polars",
+    "docling",
+    "pdf2docx",
+    "markitdown",
+    "pillow",
+    "vl-convert-python"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["app/file_tool/src"]

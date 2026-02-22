@@ -1,4 +1,14 @@
 List of possible dependancies:
-Pandas
+
 
 List of used dependancies:
+os
+logging
+PIL
+vl_convert
+pandas
+polars
+docling.document_converter
+pdf2docx
+markitdown
+json
